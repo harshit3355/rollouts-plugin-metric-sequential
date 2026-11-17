@@ -56,7 +56,19 @@ Regenerate: `go run ./cmd/bench` (about 2 minutes; output is byte-for-byte repro
 
 ## Quick start
 
-1. Build the plugin and make it available to the Rollouts controller, for example in an image based on the controller (this is what the end-to-end test does):
+1. Register the released binary in the `argo-rollouts-config` ConfigMap and restart the controller. The controller downloads it at startup and refuses it if the SHA-256 does not match:
+
+   ```yaml
+   data:
+     metricProviderPlugins: |-
+       - name: "harshit3355/sequential"
+         location: "https://github.com/harshit3355/rollouts-plugin-metric-sequential/releases/download/v0.1.0/rollouts-plugin-metric-sequential-linux-amd64"
+         sha256: "5d36cae1bb36d46dd22deb72f441253b02595a76c0a9f992bfa67e50ab1a2bd3"
+   ```
+
+   On arm64 nodes use `rollouts-plugin-metric-sequential-linux-arm64` with `sha256: "5d13756937da5ee885aed419e0dc8d6d62db33370222aa2719880eff04cadee1"` (both in the release's `SHA256SUMS`). Each binary has a signed SLSA build provenance attestation; check it with `gh attestation verify <binary> --repo harshit3355/rollouts-plugin-metric-sequential`.
+
+2. Without internet access from the controller, build the binary into an image based on the controller and point `location` at `file:///plugins/rollouts-plugin-metric-sequential` instead. The end-to-end test uses this route:
 
    ```sh
    CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags "-s -w" -o rollouts-plugin-metric-sequential .
@@ -65,15 +77,6 @@ Regenerate: `go run ./cmd/bench` (about 2 minutes; output is byte-for-byte repro
    ```dockerfile
    FROM quay.io/argoproj/argo-rollouts:v1.10.2
    COPY --chmod=0755 rollouts-plugin-metric-sequential /plugins/rollouts-plugin-metric-sequential
-   ```
-
-2. Register it in the `argo-rollouts-config` ConfigMap and restart the controller:
-
-   ```yaml
-   data:
-     metricProviderPlugins: |-
-       - name: "harshit3355/sequential"
-         location: "file:///plugins/rollouts-plugin-metric-sequential"
    ```
 
 3. Use it in an AnalysisTemplate. Each query must return one number; `$WINDOW` is replaced with the time since the previous measurement (for example `15s`), so consecutive windows do not overlap:
@@ -140,7 +143,7 @@ Code: [`internal/seqtest`](internal/seqtest/seqtest.go) (the test), [`internal/p
 
 ## Roadmap
 
-- Release binaries with SHA-256 sums so the plugin can be installed with an `https://` location instead of a custom image.
+- Run the end-to-end test against the released binary (`https://` location) as well as the `file://` route.
 - A latency mode on histogram buckets, with an example for an SLO threshold.
 - A "prove no regression" mode that succeeds only once the canary is shown to be within the margin, for an inline analysis before promotion.
 
