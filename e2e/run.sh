@@ -43,12 +43,14 @@ EOF
 
 log "creating kind cluster $CLUSTER"
 kind create cluster --name "$CLUSTER" --wait 180s
-# Pull on the host and load into the node, so the test does not depend on
-# registry access from inside kind (which fails on some WSL setups).
-third_party="prom/prometheus:v3.5.0 curlimages/curl:8.11.1"
-for img in $third_party; do docker pull -q "$img"; done
-# shellcheck disable=SC2086
-kind load docker-image --name "$CLUSTER" seqplugin/argo-rollouts:e2e seqplugin/demo-app:e2e $third_party
+kind load docker-image --name "$CLUSTER" seqplugin/argo-rollouts:e2e seqplugin/demo-app:e2e
+# Also preload third-party images from the host, because registry access from
+# inside kind fails on some WSL setups. Loading multi-platform images fails with
+# some Docker versions; then the node pulls them itself.
+for img in prom/prometheus:v3.5.0 curlimages/curl:8.11.1; do
+    docker pull -q "$img" >/dev/null && kind load docker-image --name "$CLUSTER" "$img" ||
+        log "could not preload $img; the node will pull it"
+done
 
 log "installing Prometheus and Argo Rollouts $ROLLOUTS_VERSION with the plugin"
 kubectl apply -f e2e/manifests/prometheus.yaml
