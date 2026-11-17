@@ -16,6 +16,8 @@ flowchart LR
 
 > v0.1. The statistics are not new (see [Research lineage](#research-lineage)). What this repository adds is a working, open Argo Rollouts plugin, a reproducible benchmark against the rules people actually use, and an end-to-end test on a real cluster. The benchmark traffic is **synthetic**.
 
+**Read more:** the full write-up on Medium, [Your Canary Analysis Checks Every Minute. Its Statistics Assume You Check Once.](https://medium.com/@harshitnagila555/your-canary-analysis-checks-every-minute-its-statistics-assume-you-check-once-c747072e73b3), and the [launch post on LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:7528549386759364608/).
+
 ## Worked example
 
 The end-to-end test ([`e2e/run.sh`](e2e/run.sh)) runs the real Argo Rollouts v1.10.2 controller with this plugin, Prometheus and a demo app that fails a set share of requests, on a kind cluster:
@@ -146,6 +148,11 @@ Code: [`internal/seqtest`](internal/seqtest/seqtest.go) (the test), [`internal/p
 - Run the end-to-end test against the released binary (`https://` location) as well as the `file://` route.
 - A latency mode on histogram buckets, with an example for an SLO threshold.
 - A "prove no regression" mode that succeeds only once the canary is shown to be within the margin, for an inline analysis before promotion.
+
+## Read more
+
+- Medium: [Your Canary Analysis Checks Every Minute. Its Statistics Assume You Check Once.](https://medium.com/@harshitnagila555/your-canary-analysis-checks-every-minute-its-statistics-assume-you-check-once-c747072e73b3)
+- LinkedIn: [launch post](https://www.linkedin.com/feed/update/urn:li:ugcPost:7528549386759364608/) · [Harshit Nagila](https://www.linkedin.com/in/harshit555)
 
 ## License
 
