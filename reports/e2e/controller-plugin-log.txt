@@ -1,0 +1,6 @@
+time="2026-11-17T17:20:42Z" level=info msg="Copied plugin from /plugins/rollouts-plugin-metric-sequential to /home/argo-rollouts/plugin-bin/harshit3355/sequential"
+2026-11-17T17:22:06.829Z [DEBUG] plugin: starting plugin: path=/home/argo-rollouts/plugin-bin/harshit3355/sequential args=["/home/argo-rollouts/plugin-bin/harshit3355/sequential"]
+2026-11-17T17:22:06.831Z [DEBUG] plugin: plugin started: path=/home/argo-rollouts/plugin-bin/harshit3355/sequential pid=31
+2026-11-17T17:22:06.831Z [DEBUG] plugin: waiting for RPC address: plugin=/home/argo-rollouts/plugin-bin/harshit3355/sequential
+2026-11-17T17:22:06.877Z [DEBUG] plugin: using plugin: version=1
+2026-11-17T17:22:06.877Z [DEBUG] plugin.sequential: plugin address: address=/tmp/plugin2078041746 network=unix timestamp=2026-11-17T17:22:06.877Z

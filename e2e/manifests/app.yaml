@@ -1,0 +1,107 @@
+# Demo Rollout gated by the sequential plugin, plus a load generator.
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: sequential
+spec:
+  args:
+    - name: canary-hash
+    - name: stable-hash
+  metrics:
+    - name: regression
+      interval: 15s
+      failureLimit: 0
+      provider:
+        plugin:
+          harshit3355/sequential:
+            address: http://prometheus.monitoring.svc:9090
+            alpha: 0.05
+            margin: 0.1
+            canary:
+              bad: sum(increase(demo_requests_total{code="500",rollouts_pod_template_hash="{{args.canary-hash}}"}[$WINDOW]))
+              total: sum(increase(demo_requests_total{rollouts_pod_template_hash="{{args.canary-hash}}"}[$WINDOW]))
+            baseline:
+              bad: sum(increase(demo_requests_total{code="500",rollouts_pod_template_hash="{{args.stable-hash}}"}[$WINDOW]))
+              total: sum(increase(demo_requests_total{rollouts_pod_template_hash="{{args.stable-hash}}"}[$WINDOW]))
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: demo
+spec:
+  replicas: 4
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+      annotations:
+        prometheus.io/scrape: "true"
+    spec:
+      containers:
+        - name: demo
+          image: seqplugin/demo-app:e2e
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: ERROR_RATE
+              value: "0.01"
+            - name: VERSION
+              value: v1
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /metrics
+              port: 8080
+  strategy:
+    canary:
+      # Background analysis from the first pause until the rollout finishes.
+      analysis:
+        templates:
+          - templateName: sequential
+        startingStep: 1
+        args:
+          - name: canary-hash
+            valueFrom:
+              podTemplateHashValue: Latest
+          - name: stable-hash
+            valueFrom:
+              podTemplateHashValue: Stable
+      steps:
+        - setWeight: 25
+        - pause: {duration: 3m}
+        - setWeight: 50
+        - pause: {duration: 3m}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo
+spec:
+  selector:
+    app: demo
+  ports:
+    - port: 80
+      targetPort: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loadgen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: loadgen
+  template:
+    metadata:
+      labels:
+        app: loadgen
+    spec:
+      containers:
+        - name: curl
+          image: curlimages/curl:8.11.1
+          command: ["/bin/sh", "-c", "while true; do curl -s -o /dev/null http://demo.default.svc/; done"]

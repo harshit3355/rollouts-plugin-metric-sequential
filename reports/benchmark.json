@@ -1,0 +1,3905 @@
+{
+  "generatedBy": "go run ./cmd/bench -reps 2000 -seed 1",
+  "goVersion": "go1.26.10",
+  "repsPerScenario": 2000,
+  "seed": 1,
+  "alpha": 0.05,
+  "margin": 0.1,
+  "canaryWeights": [
+    0.05,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "windowsPerStep": 10,
+  "results": [
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0155,
+      "meanDetectionLook": 20,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.809,
+      "meanDetectionLook": 31.334981458590853,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0455,
+      "meanDetectionLook": 29.64835164835165,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.02,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0185,
+      "meanDetectionLook": 19.08108108108108,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.018,
+      "meanDetectionLook": 17.75,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.014,
+      "meanDetectionLook": 17.892857142857142,
+      "meanExcessBadEvents": 0.4450491999999889
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.8475,
+      "meanDetectionLook": 30.659587020648967,
+      "meanExcessBadEvents": 0.2759518999999986
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0555,
+      "meanDetectionLook": 29.34234234234234,
+      "meanExcessBadEvents": 0.43796534999998876
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.023,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 0.4500731999999893
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0175,
+      "meanDetectionLook": 18.542857142857144,
+      "meanExcessBadEvents": 0.4438954999999893
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0185,
+      "meanDetectionLook": 18.81081081081081,
+      "meanExcessBadEvents": 0.4435987499999894
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.025,
+      "meanDetectionLook": 17.96,
+      "meanExcessBadEvents": 1.103568375000023
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.903,
+      "meanDetectionLook": 29.688815060908084,
+      "meanExcessBadEvents": 0.6221683749999872
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.097,
+      "meanDetectionLook": 29.144329896907216,
+      "meanExcessBadEvents": 1.071235125000018
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.044,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 1.125027375000026
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0285,
+      "meanDetectionLook": 18.45614035087719,
+      "meanExcessBadEvents": 1.1007753750000233
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.034,
+      "meanDetectionLook": 21.16176470588235,
+      "meanExcessBadEvents": 1.0990981250000227
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.051,
+      "meanDetectionLook": 19.186274509803923,
+      "meanExcessBadEvents": 2.165792500000065
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.9535,
+      "meanDetectionLook": 28.38647089669638,
+      "meanExcessBadEvents": 1.0819852499999403
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.176,
+      "meanDetectionLook": 29.599431818181817,
+      "meanExcessBadEvents": 2.0648895000000334
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.101,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 2.250943500000086
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.062,
+      "meanDetectionLook": 21.177419354838708,
+      "meanExcessBadEvents": 2.1542397500000616
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0665,
+      "meanDetectionLook": 21.285714285714285,
+      "meanExcessBadEvents": 2.148623250000066
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.131,
+      "meanDetectionLook": 23.767175572519083,
+      "meanExcessBadEvents": 4.134095999999984
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.9955,
+      "meanDetectionLook": 25.738322451029635,
+      "meanExcessBadEvents": 1.6401219999999073
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.415,
+      "meanDetectionLook": 29.966265060240964,
+      "meanExcessBadEvents": 3.637627499999999
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.313,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 4.498483000000064
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.1615,
+      "meanDetectionLook": 24.461300309597522,
+      "meanExcessBadEvents": 4.057391499999998
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.171,
+      "meanDetectionLook": 24.46783625730994,
+      "meanExcessBadEvents": 4.037593499999998
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.4365,
+      "meanDetectionLook": 25.140893470790378,
+      "meanExcessBadEvents": 6.674952000000006
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 21.629,
+      "meanExcessBadEvents": 2.213926999999893
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.8205,
+      "meanDetectionLook": 27.02376599634369,
+      "meanExcessBadEvents": 4.772574999999892
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.7565,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 9.003087000000233
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.5505,
+      "meanDetectionLook": 26.044504995458674,
+      "meanExcessBadEvents": 6.184694999999984
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.506,
+      "meanDetectionLook": 24.817193675889328,
+      "meanExcessBadEvents": 6.257627000000005
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.919,
+      "meanDetectionLook": 21.673014145810665,
+      "meanExcessBadEvents": 6.4332119999996715
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 16.9695,
+      "meanExcessBadEvents": 2.7010819999999165
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.996,
+      "meanDetectionLook": 20.678212851405622,
+      "meanExcessBadEvents": 4.371663999999815
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.993,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 17.99639800000018
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.962,
+      "meanDetectionLook": 21.22972972972973,
+      "meanExcessBadEvents": 5.590167999999744
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.946,
+      "meanDetectionLook": 20.912262156448204,
+      "meanExcessBadEvents": 5.766681999999719
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.009,
+      "meanDetectionLook": 6.666666666666667,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.974,
+      "meanDetectionLook": 12.90965092402464,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0815,
+      "meanDetectionLook": 19.165644171779142,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0065,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0105,
+      "meanDetectionLook": 9.047619047619047,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.014,
+      "meanDetectionLook": 9.428571428571429,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0165,
+      "meanDetectionLook": 11.727272727272727,
+      "meanExcessBadEvents": 4.437099900000024
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.992,
+      "meanDetectionLook": 12.147177419354838,
+      "meanExcessBadEvents": 0.4600544000000073
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.1325,
+      "meanDetectionLook": 22.08679245283019,
+      "meanExcessBadEvents": 4.09615550000001
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0305,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 4.499872000000018
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.015,
+      "meanDetectionLook": 11.066666666666666,
+      "meanExcessBadEvents": 4.442288050000016
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.026,
+      "meanDetectionLook": 15.73076923076923,
+      "meanExcessBadEvents": 4.410829150000016
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.054,
+      "meanDetectionLook": 17.435185185185187,
+      "meanExcessBadEvents": 10.801953124999821
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.996,
+      "meanDetectionLook": 10.862449799196787,
+      "meanExcessBadEvents": 0.9344856249999971
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.3655,
+      "meanDetectionLook": 23.77154582763338,
+      "meanExcessBadEvents": 8.655716874999975
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.189,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 11.249841374999866
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0605,
+      "meanDetectionLook": 18.94214876033058,
+      "meanExcessBadEvents": 10.770113499999821
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0985,
+      "meanDetectionLook": 19.80710659898477,
+      "meanExcessBadEvents": 10.495504374999815
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.193,
+      "meanDetectionLook": 22.647668393782382,
+      "meanExcessBadEvents": 19.75476625000022
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.52,
+      "meanExcessBadEvents": 1.414949249999998
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.754,
+      "meanDetectionLook": 23.657824933687003,
+      "meanExcessBadEvents": 11.562904500000103
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.6375,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 22.50160950000017
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.242,
+      "meanDetectionLook": 25.225206611570247,
+      "meanExcessBadEvents": 19.466806250000193
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.35,
+      "meanDetectionLook": 25.214285714285715,
+      "meanExcessBadEvents": 18.054764250000176
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.808,
+      "meanDetectionLook": 24.222153465346533,
+      "meanExcessBadEvents": 22.260496000000042
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 7.695,
+      "meanExcessBadEvents": 2.0795549999999987
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.998,
+      "meanDetectionLook": 17.657815631262526,
+      "meanExcessBadEvents": 8.756334000000024
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.995,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 44.998865999999694
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.901,
+      "meanDetectionLook": 24.696448390677027,
+      "meanExcessBadEvents": 19.997613999999995
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.9365,
+      "meanDetectionLook": 22.904431393486387,
+      "meanExcessBadEvents": 17.013509000000035
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 12.8395,
+      "meanExcessBadEvents": 9.695847000000024
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.7105,
+      "meanExcessBadEvents": 2.896814999999988
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.252,
+      "meanExcessBadEvents": 5.593477000000017
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 89.9989700000013
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 12.677,
+      "meanExcessBadEvents": 9.33341800000003
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 11.552,
+      "meanExcessBadEvents": 8.097889999999982
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.589,
+      "meanExcessBadEvents": 5.906688000000002
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.165,
+      "meanExcessBadEvents": 4.1690360000000135
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.689,
+      "meanExcessBadEvents": 4.779988000000012
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 180.01943599999626
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.566,
+      "meanExcessBadEvents": 5.8673360000000025
+    },
+    {
+      "scenario": {
+        "baseRate": 0.001,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.181,
+      "meanExcessBadEvents": 5.410306
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0095,
+      "meanDetectionLook": 8.789473684210526,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.975,
+      "meanDetectionLook": 13.208717948717949,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0735,
+      "meanDetectionLook": 16.93877551020408,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.008,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0105,
+      "meanDetectionLook": 9.19047619047619,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0145,
+      "meanDetectionLook": 10.620689655172415,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0165,
+      "meanDetectionLook": 8.606060606060606,
+      "meanExcessBadEvents": 4.432455000000135
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.9885,
+      "meanDetectionLook": 12.378856853818917,
+      "meanExcessBadEvents": 0.5089739999999965
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.1625,
+      "meanDetectionLook": 22.147692307692306,
+      "meanExcessBadEvents": 4.013599000000011
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.05,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 4.501222500000132
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0165,
+      "meanDetectionLook": 10.393939393939394,
+      "meanExcessBadEvents": 4.436106000000139
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0365,
+      "meanDetectionLook": 16.698630136986303,
+      "meanExcessBadEvents": 4.377211500000109
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.042,
+      "meanDetectionLook": 18.476190476190474,
+      "meanExcessBadEvents": 10.909677500000065
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.997,
+      "meanDetectionLook": 11.175025075225678,
+      "meanExcessBadEvents": 0.9537762499999958
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.3685,
+      "meanDetectionLook": 24.67706919945726,
+      "meanExcessBadEvents": 8.736496250000044
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.2015,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 11.249940000000022
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.048,
+      "meanDetectionLook": 20.791666666666668,
+      "meanExcessBadEvents": 10.889613750000068
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0945,
+      "meanDetectionLook": 23.158730158730158,
+      "meanExcessBadEvents": 10.604802500000075
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.1915,
+      "meanDetectionLook": 25.133159268929504,
+      "meanExcessBadEvents": 20.012189999999926
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.4765,
+      "meanExcessBadEvents": 1.4202724999999885
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.777,
+      "meanDetectionLook": 23.552767052767052,
+      "meanExcessBadEvents": 11.29204000000002
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.6365,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 22.50159749999992
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.241,
+      "meanDetectionLook": 26.688796680497926,
+      "meanExcessBadEvents": 19.632649999999884
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.3545,
+      "meanDetectionLook": 26.181946403385048,
+      "meanExcessBadEvents": 18.120720000000002
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.831,
+      "meanDetectionLook": 24.180505415162454,
+      "meanExcessBadEvents": 21.72322999999972
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 7.669,
+      "meanExcessBadEvents": 2.0733099999999918
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.9975,
+      "meanDetectionLook": 16.83558897243108,
+      "meanExcessBadEvents": 8.060759999999991
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.995,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 45.00102000000043
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.918,
+      "meanDetectionLook": 24.431917211328976,
+      "meanExcessBadEvents": 19.231714999999742
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.937,
+      "meanDetectionLook": 22.35752401280683,
+      "meanExcessBadEvents": 16.277029999999797
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 13.071,
+      "meanExcessBadEvents": 9.822039999999921
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.721,
+      "meanExcessBadEvents": 2.9021500000000016
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.2865,
+      "meanExcessBadEvents": 5.668369999999967
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 90.00577999999865
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 12.901,
+      "meanExcessBadEvents": 9.522479999999936
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 11.869,
+      "meanExcessBadEvents": 8.38878999999994
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.6915,
+      "meanExcessBadEvents": 6.0211000000000165
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.21,
+      "meanExcessBadEvents": 4.217540000000011
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.545,
+      "meanExcessBadEvents": 4.625520000000006
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 179.93298000000118
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.6845,
+      "meanExcessBadEvents": 6.003260000000021
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.2885,
+      "meanExcessBadEvents": 5.5287400000000195
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0025,
+      "meanDetectionLook": 3.2,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.0585,
+      "meanDetectionLook": 12.632478632478632,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.049,
+      "meanDetectionLook": 8.66326530612245,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.001,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0025,
+      "meanDetectionLook": 3.2,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.006,
+      "meanDetectionLook": 7.916666666666667,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0085,
+      "meanDetectionLook": 12.764705882352942,
+      "meanExcessBadEvents": 44.68336549999962
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.139,
+      "meanDetectionLook": 12.431654676258994,
+      "meanExcessBadEvents": 39.31408949999968
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.2395,
+      "meanDetectionLook": 16.430062630480165,
+      "meanExcessBadEvents": 36.62981899999985
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0485,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 44.99622049999962
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0085,
+      "meanDetectionLook": 11.705882352941176,
+      "meanExcessBadEvents": 44.67608299999958
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.08,
+      "meanDetectionLook": 24.0375,
+      "meanExcessBadEvents": 42.90765199999978
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.215,
+      "meanDetectionLook": 26.72325581395349,
+      "meanExcessBadEvents": 99.61499750000031
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.431,
+      "meanDetectionLook": 13.519721577726218,
+      "meanExcessBadEvents": 69.39689625000074
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.89,
+      "meanDetectionLook": 19.130898876404494,
+      "meanExcessBadEvents": 38.800775000000094
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.801,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 112.49508625000041
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.2655,
+      "meanDetectionLook": 28.073446327683616,
+      "meanExcessBadEvents": 97.89113625000022
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.755,
+      "meanDetectionLook": 26.473509933774835,
+      "meanExcessBadEvents": 64.50788875000038
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.993,
+      "meanDetectionLook": 19.89274924471299,
+      "meanExcessBadEvents": 53.73520749999985
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.9285,
+      "meanDetectionLook": 12.319870759289175,
+      "meanExcessBadEvents": 37.403702499999994
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.353,
+      "meanExcessBadEvents": 15.252840000000026
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 224.96150499999632
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.998,
+      "meanDetectionLook": 19.551603206412825,
+      "meanExcessBadEvents": 50.21395999999992
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 14.779,
+      "meanExcessBadEvents": 29.19523750000032
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 7.213,
+      "meanExcessBadEvents": 19.78170999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 6.305,
+      "meanExcessBadEvents": 16.17449999999994
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.6845,
+      "meanExcessBadEvents": 9.312680000000011
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 450.0829999999992
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 7.186,
+      "meanExcessBadEvents": 19.657899999999977
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.829,
+      "meanExcessBadEvents": 15.202689999999977
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.4935,
+      "meanExcessBadEvents": 12.444300000000004
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.66,
+      "meanExcessBadEvents": 18.27722000000002
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.6575,
+      "meanExcessBadEvents": 8.27141
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 900.0416400000029
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.4925,
+      "meanExcessBadEvents": 12.438920000000005
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.205,
+      "meanExcessBadEvents": 11.004719999999978
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.1935,
+      "meanExcessBadEvents": 11.941180000000008
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.0235,
+      "meanExcessBadEvents": 30.234739999999984
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.055,
+      "meanExcessBadEvents": 10.558339999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 1799.845299999998
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.193,
+      "meanExcessBadEvents": 11.935620000000007
+    },
+    {
+      "scenario": {
+        "baseRate": 0.01,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.1425,
+      "meanExcessBadEvents": 11.431639999999998
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.007,
+      "meanDetectionLook": 3.2857142857142856,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.328,
+      "meanDetectionLook": 13.36890243902439,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0855,
+      "meanDetectionLook": 8.836257309941521,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0005,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.007,
+      "meanDetectionLook": 3.2857142857142856,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0135,
+      "meanDetectionLook": 7.222222222222222,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0095,
+      "meanDetectionLook": 10.052631578947368,
+      "meanExcessBadEvents": 22.311627500000135
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.499,
+      "meanDetectionLook": 13.988977955911823,
+      "meanExcessBadEvents": 12.604027500000031
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.225,
+      "meanDetectionLook": 16.782222222222224,
+      "meanExcessBadEvents": 18.554460000000155
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0435,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 22.496512500000087
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0095,
+      "meanDetectionLook": 8.052631578947368,
+      "meanExcessBadEvents": 22.29818250000014
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0415,
+      "meanDetectionLook": 21.83132530120482,
+      "meanExcessBadEvents": 21.88819750000013
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.075,
+      "meanDetectionLook": 24.4,
+      "meanExcessBadEvents": 53.76786249999989
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.7715,
+      "meanDetectionLook": 13.804925469863901,
+      "meanExcessBadEvents": 18.265681249999755
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.7485,
+      "meanDetectionLook": 21.04809619238477,
+      "meanExcessBadEvents": 27.326981249999903
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.5685,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 56.26417500000004
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.1005,
+      "meanDetectionLook": 27.28855721393035,
+      "meanExcessBadEvents": 53.47668124999982
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.3755,
+      "meanDetectionLook": 28.487350199733687,
+      "meanExcessBadEvents": 45.90560624999965
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.8395,
+      "meanDetectionLook": 25.63787969029184,
+      "meanExcessBadEvents": 56.52626249999964
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.985,
+      "meanDetectionLook": 10.949238578680204,
+      "meanExcessBadEvents": 10.90083750000008
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.9985,
+      "meanDetectionLook": 13.182774161241863,
+      "meanExcessBadEvents": 13.934662499999988
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.9985,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 112.4985125000003
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.919,
+      "meanDetectionLook": 25.609902067464635,
+      "meanExcessBadEvents": 50.18598749999962
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.987,
+      "meanDetectionLook": 21.386018237082066,
+      "meanExcessBadEvents": 31.787537499999953
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 11.8035,
+      "meanExcessBadEvents": 19.875925000000077
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 6.64,
+      "meanExcessBadEvents": 8.608125000000019
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 5.95,
+      "meanExcessBadEvents": 8.052800000000005
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 225.02857499999976
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 11.7225,
+      "meanExcessBadEvents": 19.562775000000048
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.815,
+      "meanExcessBadEvents": 14.978025000000077
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.239,
+      "meanExcessBadEvents": 10.68230000000007
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.098,
+      "meanExcessBadEvents": 10.228700000000073
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.4665,
+      "meanExcessBadEvents": 6.171650000000009
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 449.8691499999988
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.236,
+      "meanExcessBadEvents": 10.676900000000066
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.7345,
+      "meanExcessBadEvents": 9.37360000000005
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.6325,
+      "meanExcessBadEvents": 8.189199999999985
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.1245,
+      "meanExcessBadEvents": 15.67770000000003
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.273,
+      "meanExcessBadEvents": 6.385499999999994
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 899.8954999999931
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.6345,
+      "meanExcessBadEvents": 8.199299999999987
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.55,
+      "meanExcessBadEvents": 7.7725999999999935
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0295,
+      "meanDetectionLook": 3,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0035,
+      "meanDetectionLook": 10,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.004,
+      "meanDetectionLook": 12.375,
+      "meanExcessBadEvents": 224.2353099999976
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 224.97346999999743
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.2735,
+      "meanDetectionLook": 13.645338208409507,
+      "meanExcessBadEvents": 173.99952999999735
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.05,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 224.97346999999743
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.004,
+      "meanDetectionLook": 12.25,
+      "meanExcessBadEvents": 224.23529999999764
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.616,
+      "meanDetectionLook": 29.48538961038961,
+      "meanExcessBadEvents": 159.666962499997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.9535,
+      "meanDetectionLook": 24.96906135291033,
+      "meanExcessBadEvents": 222.73076874999973
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 562.4186125000058
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 9.6195,
+      "meanExcessBadEvents": 41.44158125000045
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 562.4186125000058
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.983,
+      "meanDetectionLook": 24.50915564598169,
+      "meanExcessBadEvents": 200.65521874999882
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 13.6285,
+      "meanExcessBadEvents": 60.50468125000039
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 7.4465,
+      "meanExcessBadEvents": 50.651687500000044
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.057,
+      "meanDetectionLook": 12.921052631578947,
+      "meanExcessBadEvents": 1067.1012999999914
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.9145,
+      "meanExcessBadEvents": 18.297562500000076
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 1125.0737374999887
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 7.4265,
+      "meanExcessBadEvents": 50.39293750000005
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.779,
+      "meanExcessBadEvents": 30.309400000000153
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.075,
+      "meanExcessBadEvents": 25.92465
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 6.2,
+      "meanExcessBadEvents": 79.51094999999982
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.2485,
+      "meanExcessBadEvents": 15.596550000000018
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 2249.9032500000117
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.071,
+      "meanExcessBadEvents": 25.873874999999995
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.7095,
+      "meanExcessBadEvents": 21.359500000000025
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.037,
+      "meanExcessBadEvents": 25.903500000000015
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.0335,
+      "meanExcessBadEvents": 75.80144999999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.0015,
+      "meanExcessBadEvents": 25.02530000000002
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 4500.0979499999885
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.037,
+      "meanExcessBadEvents": 25.903500000000015
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.0145,
+      "meanExcessBadEvents": 25.35035000000002
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 49.95149999999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3,
+      "meanExcessBadEvents": 149.98720000000014
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 49.95149999999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 9000.377300000047
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 49.95149999999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.05,
+        "effect": 5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 49.95149999999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0595,
+      "meanDetectionLook": 3.773109243697479,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.0005,
+      "meanDetectionLook": 17,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.0025,
+      "meanDetectionLook": 10.6,
+      "meanExcessBadEvents": 89.7861399999993
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.001,
+      "meanDetectionLook": 6.5,
+      "meanExcessBadEvents": 89.90637999999925
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.2745,
+      "meanDetectionLook": 14.067395264116575,
+      "meanExcessBadEvents": 69.87471000000068
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0465,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 89.99326999999923
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.0015,
+      "meanDetectionLook": 7.333333333333333,
+      "meanExcessBadEvents": 89.86517999999927
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.1325,
+      "meanDetectionLook": 29.815094339622643,
+      "meanExcessBadEvents": 84.7007799999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0.4435,
+      "meanDetectionLook": 30.659526493799323,
+      "meanExcessBadEvents": 181.9864499999978
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.0165,
+      "meanDetectionLook": 10.666666666666666,
+      "meanExcessBadEvents": 221.46512499999875
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.9985,
+      "meanDetectionLook": 13.461191787681523,
+      "meanExcessBadEvents": 31.736650000000026
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.992,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 224.91407499999883
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0.578,
+      "meanDetectionLook": 31.282006920415224,
+      "meanExcessBadEvents": 171.3666499999984
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0.9935,
+      "meanDetectionLook": 22.817815802717664,
+      "meanExcessBadEvents": 66.62975000000071
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 14.4235,
+      "meanExcessBadEvents": 51.89434999999992
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0.3205,
+      "meanDetectionLook": 13.096723868954758,
+      "meanExcessBadEvents": 320.6057000000044
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.735,
+      "meanExcessBadEvents": 12.418300000000023
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 450.02830000000125
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 14.3355,
+      "meanExcessBadEvents": 51.02519999999995
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 10,
+      "meanExcessBadEvents": 29.437999999999903
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.248,
+      "meanExcessBadEvents": 21.29499999999991
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 6.2765,
+      "meanExcessBadEvents": 32.227199999999925
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.6625,
+      "meanExcessBadEvents": 8.322700000000006
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 899.7289999999953
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.2345,
+      "meanExcessBadEvents": 21.20269999999992
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.3245,
+      "meanExcessBadEvents": 16.590500000000006
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.432,
+      "meanExcessBadEvents": 14.241000000000033
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.0935,
+      "meanExcessBadEvents": 30.801599999999986
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.0245,
+      "meanExcessBadEvents": 10.154400000000019
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 1799.366600000006
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.431,
+      "meanExcessBadEvents": 14.232400000000032
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 500
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.2925,
+      "meanExcessBadEvents": 12.83640000000004
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.0095,
+      "meanDetectionLook": 1.4736842105263157,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 0
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 899.9658299999959
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 899.9658299999959
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 0.3055,
+      "meanDetectionLook": 12.854337152209492,
+      "meanExcessBadEvents": 669.4576400000038
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 0.0465,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 899.9658299999959
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 899.9658299999959
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.1,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 18.57,
+      "meanExcessBadEvents": 163.384509999999
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 12.096,
+      "meanExcessBadEvents": 191.73332500000032
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 2250.2564999999963
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3.2585,
+      "meanExcessBadEvents": 41.222275000000074
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 2250.2564999999963
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 12.04,
+      "meanExcessBadEvents": 189.97825000000037
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.25,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 4.9595,
+      "meanExcessBadEvents": 62.45772500000004
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.4365,
+      "meanExcessBadEvents": 60.975199999999965
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 0,
+      "meanDetectionLook": 0,
+      "meanExcessBadEvents": 4499.870049999955
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.126,
+      "meanExcessBadEvents": 28.20129999999997
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 4499.870049999955
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 2.435,
+      "meanExcessBadEvents": 60.94089999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 1.5,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.6265,
+      "meanExcessBadEvents": 40.70064999999988
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.0105,
+      "meanExcessBadEvents": 50.597899999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 6.085,
+      "meanExcessBadEvents": 311.76590000000016
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 50.073899999999995
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 8999.665200000089
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.0105,
+      "meanExcessBadEvents": 50.597899999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 2,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1.002,
+      "meanExcessBadEvents": 50.17469999999999
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "sequential",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 100.34519999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "threshold-2x-failureLimit-2",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 3,
+      "meanExcessBadEvents": 300.1740000000004
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "peeking-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 100.34519999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "fixed-horizon-z",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 40,
+      "meanExcessBadEvents": 17997.451199999974
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-pooled",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 100.34519999999996
+    },
+    {
+      "scenario": {
+        "baseRate": 0.2,
+        "effect": 3,
+        "trafficPerInterval": 5000
+      },
+      "method": "ablation-no-margin",
+      "reps": 2000,
+      "rollbackRate": 1,
+      "meanDetectionLook": 1,
+      "meanExcessBadEvents": 100.34519999999996
+    }
+  ]
+}
